@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎域 - 沉浸式密室逃脫體驗</title>
+    <link rel="stylesheet" href="index-css.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-container">
+            <img src="/index-img/logo.jpg" alt="謎域Logo" class="logo-img">
+            <div class="logo-text">謎域<span>ENIGMA STUDIO</span></div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">首頁</a></li>
+                <li><a href="#">密室主題</a></li>
+                <li><a href="#">常見問題</a></li>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">會員中心</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="reserve-btn">立即預約</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="mystery-particles"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">解開謎語，探索未知</h1>
+            <p class="hero-subtitle">進入「謎域」，體驗最沉浸式的密室逃脫遊戲。</p>
+            <div class="hero-buttons">
+                <a href="#" class="reserve-btn">立即預約</a>
+                <a href="#" class="btn-secondary">探索主題</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <h2 class="section-title">最新消息</h2>
+        <div class="news-container">
+            <div class="news-slide">
+                <div class="news-item">
+                    <h3 class="news-title">新主題「虛擬迷途」即將上線！</h3>
+                    <span class="news-date">2025.04.01</span>
+                    <p class="news-content">我們即將推出結合VR技術的全新密室主題「虛擬迷途」，帶給您前所未有的沉浸式體驗。在這個主題中，現實與虛擬的界限變得模糊，玩家需要在兩個世界中尋找線索。預計4月底正式開放預約，敬請期待！</p>
+                </div>
+            </div>
+            <div class="news-nav">
+                <div class="news-dot active"></div>
+                <div class="news-dot"></div>
+                <div class="news-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <a href="#" class="footer-logo">謎域</a>
+                <p class="footer-description">「謎域」致力於打造最高品質的密室逃脫體驗，我們的每一個主題都經過精心設計，為玩家帶來驚喜與挑戰。</p>
+                <div class="footer-social">
+                    <a href="#"><span>FB</span></a>
+                    <a href="#"><span>IG</span></a>
+                    <a href="#"><span>Line</span></a>
+                </div>
+            </div>
+            
+            <div class="footer-links-container">
+                <h3 class="footer-title">快速連結</h3>
+                <ul class="footer-links">
+                    <li><a href="#">密室主題</a></li>
+                    <li><a href="#">線上預約</a></li>
+                    <li><a href="#">常見問題</a></li>
+                    <li><a href="#">會員專區</a></li>
+                    <li><a href="#">關於我們</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact-container">
+                <h3 class="footer-title">聯絡我們</h3>
+                <div class="footer-contact">
+                    <span>📍</span>
+                    <span>台北市信義區松高路123號5樓</span>
+                </div>
+                <div class="footer-contact">
+                    <span>📞</span>
+                    <span>(04) 2345-6789</span>
+                </div>
+                <div class="footer-contact">
+                    <span>📧</span>
+                    <span>info@enigmastudio.com.tw</span>
+                </div>
+                <div class="footer-contact">
+                    <span>🕒</span>
+                    <span>週一至週日 10:00-22:00</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 謎域 Enigma Studio. 版權所有。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 簡單的視差滾動效果
+        window.addEventListener('scroll', function() {
+            const scrollPos = window.scrollY;
+            
+            if (scrollPos > 50) {
+                document.querySelector('header').style.background = 'rgba(3, 3, 4, 0.95)';
+            } else {
+                document.querySelector('header').style.background = 'rgba(3, 3, 4, 0.8)';
+            }
+            
+            // 簡單的粒子效果
+            const particles = document.querySelector('.mystery-particles');
+            particles.style.transform = `translateY(${scrollPos * 0.4}px)`;
+        });
+        
+        // 輪播功能（簡易版）
+        const dots = document.querySelectorAll('.news-dot');
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                dots.forEach(d => d.classList.remove('active'));
+                dot.classList.add('active');
+                document.querySelector('.news-slide').style.transform = `translateX(-${index * 100}%)`;
+            });
+        });
+    </script>
+</body>
+</html>

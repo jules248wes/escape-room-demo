@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎域 - 密室主題</title>
+    <link rel="stylesheet" href="theme-style.css">
+    <!-- 引入Font Awesome圖示庫，用於書籤圖示 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="/index-img/logo.jpg" alt="謎域Logo" class="logo-img">
+            <div class="logo-text">謎域<span>ENIGMA STUDIO</span></div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="#" class="active">密室主題</a></li>
+                <li><a href="#">常見問題</a></li>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">會員中心</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="reserve-btn">立即預約</a>
+    </header>
+
+    <div class="page-title-container">
+        <h1 class="page-title">密室主題探索</h1>
+        <p class="page-subtitle">選擇你的冒險，解開謎團</p>
+    </div>
+
+    <div class="container">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label for="people-filter">遊戲規模</label>
+                <select id="people-filter" class="filter">
+                    <option value="all">全部人數</option>
+                    <option value="2-4">小型（2-4人）</option>
+                    <option value="4-8">中型（4-8人）</option>
+                    <option value="8+">大型（8人以上）</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="difficulty-filter">難度</label>
+                <select id="difficulty-filter" class="filter">
+                    <option value="all">全部難度</option>
+                    <option value="easy">簡單</option>
+                    <option value="medium">中等</option>
+                    <option value="hard">困難</option>
+                </select>
+            </div>
+        </div>
+
+        <main class="card-container">
+            <!-- 主題卡片 1 -->
+            <div class="card" data-people="2-4" data-difficulty="hard" data-tags="解謎,歷史">
+                <div class="card-image-container">
+                    <img src="theme-img/01埃及古墓.jpg" alt="古墓迷蹤">
+                </div>
+                <div class="card-content">
+                    <h2>古墓迷蹤</h2>
+                    <p>埃及法老的古墓中隱藏著無價之寶，但也佈滿了致命陷阱。你們是否能找出藏寶圖，避開詛咒，成功逃出生天？</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">解謎</span>
+                    <span class="tag">歷史</span>
+                </div>
+            </div>
+
+            <!-- 主題卡片 2 -->
+            <div class="card" data-people="8+" data-difficulty="medium" data-tags="懸疑,
+            新作">
+                <div class="card-image-container">
+                    <img src="theme-img/02幽靈列車.jpg" alt="幽靈列車">
+                </div>
+                <div class="card-content">
+                    <h2>幽靈列車</h2>
+                    <p>傳說中的午夜列車載著亡靈前往未知之地。你們不慎登上了這班列車，必須在到達終點站前找到逃生之道，否則將永遠無法返回。</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">懸疑</span>
+                    <span class="tag">恐怖</span>
+                    <span class="tag new-tag">新作</span>
+                </div>
+            </div>
+
+            <!-- 主題卡片 3 -->
+            <div class="card" data-people="4-8" data-difficulty="hard" data-tags="挑戰,策略">
+                <div class="card-image-container">
+                    <img src="theme-img/03生化危機.jpeg" alt="生化危機">
+                </div>
+                <div class="card-content">
+                    <h2>生化危機</h2>
+                    <p>一場實驗意外導致致命病毒外洩，你們被困在即將自毀的實驗室中。找出解藥，阻止病毒擴散，並在時間結束前逃出！</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">科學</span>
+                    <span class="tag">推理</span>
+                </div>
+            </div>
+
+            <!-- 主題卡片 4 -->
+            <div class="card" data-people="2-4" data-difficulty="medium" data-tags="合作,邏輯">
+                <div class="card-image-container">
+                    <img src="theme-img/04偵探失蹤.jpeg" alt="偵探Elizabeth失蹤事件">
+                </div>
+                <div class="card-content">
+                    <h2>偵探Elizabeth失蹤事件</h2>
+                    <p>知名偵探Elizabeth離奇失蹤，留下一系列未解之謎。進入Elizabeth的私人事務所，解開線索，揭露真相，找出偵探Elizabeth的下落。</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">解謎</span>
+                    <span class="tag">懸疑</span>
+                </div>
+            </div>
+
+            <!-- 主題卡片 5 -->
+            <div class="card" data-people="2-4" data-difficulty="easy" data-tags="歡樂,派對,新作">
+                <div class="card-image-container">
+                    <img src="theme-img/05江湖密令.jpg" alt="江湖密令">
+                </div>
+                <div class="card-content">
+                    <h2>江湖密令</h2>
+                    <p>古代江湖中，一本武功秘笈引發腥風血雨。你們身陷秘密密室，必須解開各派機關，找出秘笈，平息江湖紛爭。</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">武俠</span>
+                    <span class="tag">機關</span>
+                    <span class="tag new-tag">新作</span>
+                </div>
+            </div>
+
+            <!-- 主題卡片 6 -->
+            <div class="card" data-people="4-8" data-difficulty="medium" data-tags="科幻,新作">
+                <div class="card-image-container">
+                    <img src="theme-img/06太空迷途.png" alt="太空迷途">
+                </div>
+                <div class="card-content">
+                    <h2>太空迷途</h2>
+                    <p>太空站遭遇不明物體撞擊，氧氣系統損壞。你們是倖存的太空人，需要修復飛船系統，在氧氣耗盡前返回地球。</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">科幻</span>
+                    <span class="tag new-tag">新作</span>
+                </div>
+            </div>
+
+            <!-- 主題7 -->
+            <div class="card" data-people="2-4" data-difficulty="easy" data-tags="科幻,新作">
+                <div class="card-image-container">
+                    <img src="theme-img/07童話.png" alt="童話迷城">
+                </div>
+                <div class="card-content">
+                    <h2>童話迷城</h2>
+                    <p>被扭曲的童話世界充滿謎題和寓言。你們必須找出每個童話的真相，擊敗邪惡巫師，恢復童話的美好結局。</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">奇幻</span>
+                    <span class="tag new-tag">親子同樂</span>
+                </div>
+            </div>
+
+            <!-- 主題8 -->
+            <div class="card" data-people="4-8" data-difficulty="medium" data-tags="科幻,新作">
+                <div class="card-image-container">
+                    <img src="theme-img/08時間城堡.png" alt="遺忘城堡">
+                </div>
+                <div class="card-content">
+                    <h2>遺忘城堡</h2>
+                    <p>傳說中的遺忘城堡每百年出現一次。進入城堡的人若不能在日落前找到出口，將永遠被困在時間的迴圈中。</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">奇幻</span>
+                    <span class="tag">機關</span>
+                    <span class="tag new-tag">新作</span>
+                </div>
+            </div>
+            <!-- 主題9 -->
+            <div class="card" data-people="2-4" data-difficulty="medium" data-tags="科幻,新作">
+                <div class="card-image-container">
+                    <img src="theme-img/09犯罪調查.jpg" alt="CSI犯罪現場調查">
+                </div>
+                <div class="card-content">
+                    <h2>CSI犯罪現場調查</h2>
+                    <p>一宗離奇命案的現場被完美保存。你身為刑事鑑識人員，必須找出關鍵證據，鎖定真凶，同時洗清自己的嫌疑。</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">刑偵</span>
+                    <span class="tag">推理</span>
+                    <span class="tag new-tag">新作</span>
+                </div>
+            </div>
+
+            <!-- 主題10 -->
+            <div class="card" data-people="8+" data-difficulty="hard" data-tags="科幻,新作">
+                <div class="card-image-container">
+                    <img src="theme-img/10神廟.png" alt="失落神廟">
+                </div>
+                <div class="card-content">
+                    <h2>失落神廟</h2>
+                    <p>隱藏在深山叢林中的古代神廟，傳說守護著神秘寶藏。闖入者必須解開古老文明的謎題，避開機關陷阱，尋找出口。</p>
+                    <a href="#" class="card-btn">了解更多</a>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">歷史</span>
+                    <span class="tag">機關</span>
+                    <span class="tag new-tag">新作</span>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <a href="#" class="footer-logo">謎域</a>
+                <p class="footer-description">「謎域」致力於打造最高品質的密室逃脫體驗，我們的每一個主題都經過精心設計，為玩家帶來驚喜與挑戰。</p>
+                <div class="footer-social">
+                    <a href="#"><span>FB</span></a>
+                    <a href="#"><span>IG</span></a>
+                    <a href="#"><span>Line</span></a>
+                </div>
+            </div>
+
+            <div class="footer-links-container">
+                <h3 class="footer-title">快速連結</h3>
+                <ul class="footer-links">
+                    <li><a href="#">密室主題</a></li>
+                    <li><a href="#">線上預約</a></li>
+                    <li><a href="#">常見問題</a></li>
+                    <li><a href="#">會員專區</a></li>
+                    <li><a href="#">關於我們</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-container">
+                <h3 class="footer-title">聯絡我們</h3>
+                <div class="footer-contact">
+                    <span>📍</span>
+                    <span>台北市信義區松高路123號5樓</span>
+                </div>
+                <div class="footer-contact">
+                    <span>📞</span>
+                    <span>(04) 2345-6789</span>
+                </div>
+                <div class="footer-contact">
+                    <span>📧</span>
+                    <span>info@enigmastudio.com.tw</span>
+                </div>
+                <div class="footer-contact">
+                    <span>🕒</span>
+                    <span>週一至週日 10:00-22:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 謎域 Enigma Studio. 版權所有。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 頁面滾動效果
+        window.addEventListener('scroll', function () {
+            const scrollPos = window.scrollY;
+
+            if (scrollPos > 50) {
+                document.querySelector('header').style.background = 'rgba(3, 3, 4, 0.95)';
+            } else {
+                document.querySelector('header').style.background = 'rgba(3, 3, 4, 0.8)';
+            }
+        });
+
+        // 篩選功能的JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            const peopleFilter = document.getElementById('people-filter');
+            const difficultyFilter = document.getElementById('difficulty-filter');
+            const cards = document.querySelectorAll('.card');
+
+            // 篩選功能
+            function filterCards() {
+                const selectedPeople = peopleFilter.value;
+                const selectedDifficulty = difficultyFilter.value;
+
+                cards.forEach(card => {
+                    const cardPeople = card.getAttribute('data-people');
+                    const cardDifficulty = card.getAttribute('data-difficulty');
+
+                    const peopleMatch = selectedPeople === 'all' || cardPeople === selectedPeople;
+                    const difficultyMatch = selectedDifficulty === 'all' || cardDifficulty === selectedDifficulty;
+
+                    if (peopleMatch && difficultyMatch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // 監聽篩選器變化
+            peopleFilter.addEventListener('change', filterCards);
+            difficultyFilter.addEventListener('change', filterCards);
+        });
+    </script>
+</body>
+
+</html>
