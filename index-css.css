@@ -39,23 +39,25 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
+    padding: 5px 0; /* 增加上下間距 */
+
 }
 
 .logo-img {
-    height: 40px;
-    margin-right: 10px;
+    height: 60px; /* 原本是40px，調大到55px */
+    margin-right: 10px; /* 原本是10px，增加間距 */
 }
 
 .logo-text {
-    font-size: 28px;
+    font-size: 32px; /* 原本是28px，調大到32px */
     font-weight: bold;
     color: var(--gold);
 }
 
 .logo-text span {
     color: var(--light-gold);
-    font-size: 16px;
-    margin-left: 10px;
+    font-size: 18px; /* 原本是16px，調大到18px */
+    margin-left: 12px; /* 原本是10px，增加一點間距 */
 }
 
 nav ul {
