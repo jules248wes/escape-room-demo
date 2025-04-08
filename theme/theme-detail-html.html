@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎域 - 主題詳情頁</title>
+    <link rel="stylesheet" href="theme-detail-css.css">
+    <!-- 引入Font Awesome圖示庫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="/index-img/logo.jpg" alt="謎域Logo" class="logo-img">
+            <div class="logo-text">謎域<span>ENIGMA STUDIO</span></div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="theme-page.html" class="active">密室主題</a></li>
+                <li><a href="faq-page.html">常見問題</a></li>
+                <li><a href="about-us.html">關於我們</a></li>
+                <li><a href="#">會員中心</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="reserve-btn">立即預約</a>
+    </header>
+
+    <!-- 主題頁面的獨特頂部背景 -->
+    <div class="theme-hero" id="themeHero">
+        <div class="theme-hero-overlay"></div>
+        <div class="theme-title-container">
+            <h1 class="theme-title">古墓迷蹤</h1>
+            <div class="theme-badges">
+                <span class="theme-badge new">新主題</span>
+                <span class="theme-badge">解謎</span>
+                <span class="theme-badge">歷史</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 主題基本信息 -->
+        <section class="theme-info-section">
+            <div class="theme-info-grid">
+                <div class="theme-info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>遊戲規模</h3>
+                        <p>3-6人</p>
+                    </div>
+                </div>
+                <div class="theme-info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>遊戲時間</h3>
+                        <p>60分鐘</p>
+                    </div>
+                </div>
+                <div class="theme-info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>難度</h3>
+                        <div class="difficulty-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="difficulty-text">（4/5）</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="theme-info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>逃脫率</h3>
+                        <p>35%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主題故事與介紹 -->
+        <section class="theme-description">
+            <div class="theme-description-content">
+                <h2 class="section-title">故事背景</h2>
+                <p>埃及法老的古墓中隱藏著無價之寶，但也佈滿了致命陷阱。你們是否能找出藏寶圖，避開詛咒，成功逃出生天？</p>
+                <p>作為一名考古學家，你和你的團隊深入埃及沙漠，發現了一座失落三千年的法老古墓。據傳說，這位法老生前收藏了大量來自世界各地的珍寶，而且設下了複雜的機關保護他的陵墓。</p>
+                <p>當你們正在調查墓室的壁畫時，一陣地震突然襲來，入口坍塌了！更糟的是，你們發現牆上的壁畫描述了這座陵墓的詛咒：任何擅闖者將永遠被困在墓中！</p>
+                <p>現在，你們必須解開古老法老留下的謎題，找到秘密的出口。然而，氧氣正在減少，而古墓的機關也開始啟動......</p>
+            </div>
+            <div class="theme-image-gallery">
+                <div class="main-image">
+                    <img src="theme-img/01埃及古墓.jpg" alt="古墓迷蹤主要場景" id="mainThemeImage">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="theme-img/01埃及古墓.jpg" alt="古墓迷蹤場景1" class="thumbnail active" onclick="changeMainImage(this.src)">
+                    <img src="/api/placeholder/150/100" alt="古墓迷蹤場景2" class="thumbnail" onclick="changeMainImage(this.src)">
+                    <img src="/api/placeholder/150/100" alt="古墓迷蹤場景3" class="thumbnail" onclick="changeMainImage(this.src)">
+                    <img src="/api/placeholder/150/100" alt="古墓迷蹤場景4" class="thumbnail" onclick="changeMainImage(this.src)">
+                </div>
+            </div>
+        </section>
+
+        <!-- 遊戲特色 -->
+        <section class="theme-features">
+            <h2 class="section-title centered">遊戲特色</h2>
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>精密機關</h3>
+                    <p>多層次的物理機關與電子互動裝置，帶來沉浸式解謎體驗。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>氛圍營造</h3>
+                    <p>精心打造的埃及古墓場景，配合音效與燈光，讓您身臨其境。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>團隊合作</h3>
+                    <p>需要團隊分工協作才能解開的謎題，促進玩家間的交流與合作。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>故事性</h3>
+                    <p>隨著謎題解開，故事情節逐漸展開，揭示古墓更深的秘密。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 注意事項 -->
+        <section class="theme-notices">
+            <h2 class="section-title centered">遊戲須知</h2>
+            <div class="notices-container">
+                <div class="notice-item">
+                    <div class="notice-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="notice-content">
+                        <h3>年齡限制</h3>
+                        <p>建議13歲以上玩家參與，未滿16歲需有成人陪同。</p>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="notice-content">
+                        <h3>著裝建議</h3>
+                        <p>請穿著舒適的服裝與平底鞋，部分機關可能需要彎腰或爬行。</p>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="notice-content">
+                        <h3>電子設備</h3>
+                        <p>遊戲過程中禁止使用手機或相機，我們提供免費置物櫃存放個人物品。</p>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="notice-content">
+                        <h3>準時到場</h3>
+                        <p>請提前15分鐘到達，以便辦理報到手續與聽取遊戲說明。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 用戶評價 -->
+        <section class="theme-reviews">
+            <h2 class="section-title centered">玩家評價</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="/api/placeholder/60/60" alt="用戶頭像" class="reviewer-avatar">
+                        <div class="reviewer-info">
+                            <h4>陳小姐</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>「古墓迷蹤」的場景布置非常逼真，謎題設計也十分巧妙，我們一行6人玩得非常投入！雖然最後只差一點點就逃出來了，但整體體驗極佳，非常推薦給喜歡挑戰的朋友！</p>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="/api/placeholder/60/60" alt="用戶頭像" class="reviewer-avatar">
+                        <div class="reviewer-info">
+                            <h4>王先生</h4>
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p>謎題的設計很有邏輯性，需要團隊合作才能順利解開。埃及風格的裝潢非常精緻，工作人員也很友善，會適時給予提示。唯一小缺點是部分房間稍暗，不過反而增加了神秘感。值得一玩！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相關主題推薦 -->
+        <section class="related-themes">
+            <h2 class="section-title centered">你可能也會喜歡</h2>
+            <div class="related-themes-container">
+                <div class="related-theme-card">
+                    <div class="related-theme-img">
+                        <img src="theme-img/02幽靈列車.jpg" alt="幽靈列車">
+                    </div>
+                    <div class="related-theme-info">
+                        <h3>幽靈列車</h3>
+                        <div class="theme-brief-info">
+                            <span><i class="fas fa-users"></i> 4-8人</span>
+                            <span><i class="fas fa-star"></i> 中等難度</span>
+                        </div>
+                        <a href="#" class="related-theme-btn">了解更多</a>
+                    </div>
+                </div>
+                <div class="related-theme-card">
+                    <div class="related-theme-img">
+                        <img src="theme-img/10神廟.png" alt="失落神廟">
+                    </div>
+                    <div class="related-theme-info">
+                        <h3>失落神廟</h3>
+                        <div class="theme-brief-info">
+                            <span><i class="fas fa-users"></i> 3-7人</span>
+                            <span><i class="fas fa-star"></i> 困難</span>
+                        </div>
+                        <a href="#" class="related-theme-btn">了解更多</a>
+                    </div>
+                </div>
+                <div class="related-theme-card">
+                    <div class="related-theme-img">
+                        <img src="theme-img/05江湖密令.jpg" alt="江湖密令">
+                    </div>
+                    <div class="related-theme-info">
+                        <h3>江湖密令</h3>
+                        <div class="theme-brief-info">
+                            <span><i class="fas fa-users"></i> 3-7人</span>
+                            <span><i class="fas fa-star"></i> 中等難度</span>
+                        </div>
+                        <a href="#" class="related-theme-btn">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 預約區塊 -->
+        <section class="booking-section">
+            <div class="booking-content">
+                <h2>準備好挑戰了嗎？</h2>
+                <p>立即預約「古墓迷蹤」，展開一場刺激的考古冒險！</p>
+                <a href="#" class="booking-btn">立即預約</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <a href="#" class="footer-logo">謎域</a>
+                <p class="footer-description">「謎域」致力於打造最高品質的密室逃脫體驗，我們的每一個主題都經過精心設計，為玩家帶來驚喜與挑戰。</p>
+                <div class="footer-social">
+                    <a href="#"><span>FB</span></a>
+                    <a href="#"><span>IG</span></a>
+                    <a href="#"><span>Line</span></a>
+                </div>
+            </div>
+
+            <div class="footer-links-container">
+                <h3 class="footer-title">快速連結</h3>
+                <ul class="footer-links">
+                    <li><a href="#">密室主題</a></li>
+                    <li><a href="#">線上預約</a></li>
+                    <li><a href="#">常見問題</a></li>
+                    <li><a href="#">會員專區</a></li>
+                    <li><a href="#">關於我們</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-container">
+                <h3 class="footer-title">聯絡我們</h3>
+                <div class="footer-contact">
+                    <span>📍</span>
+                    <span>台北市信義區松高路123號5樓</span>
+                </div>
+                <div class="footer-contact">
+                    <span>📞</span>
+                    <span>(04) 2345-6789</span>
+                </div>
+                <div class="footer-contact">
+                    <span>📧</span>
+                    <span>info@enigmastudio.com.tw</span>
+                </div>
+                <div class="footer-contact">
+                    <span>🕒</span>
+                    <span>週一至週日 10:00-22:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 謎域 Enigma Studio. 版權所有。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 頁面滾動效果
+        window.addEventListener('scroll', function () {
+            const scrollPos = window.scrollY;
+
+            if (scrollPos > 50) {
+                document.querySelector('header').style.background = 'rgba(3, 3, 4, 0.95)';
+            } else {
+                document.querySelector('header').style.background = 'rgba(3, 3, 4, 0.8)';
+            }
+        });
+
+        // 圖片展示區域 - 切換主圖
+        function changeMainImage(src) {
+            const mainImage = document.getElementById('mainThemeImage');
+            mainImage.src = src;
+            
+            // 更新縮圖選中狀態
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                if (thumb.src === src) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
