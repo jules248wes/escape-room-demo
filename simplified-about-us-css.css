@@ -40,7 +40,6 @@ body {
     font-size: 42px;
     color: var(--gold);
     margin-bottom: 15px;
-    animation: fadeIn 1s forwards;
 }
 
 .page-subtitle {
@@ -48,8 +47,6 @@ body {
     color: #fff;
     max-width: 600px;
     margin: 0 auto;
-    animation: fadeIn 1s forwards 0.3s;
-    opacity: 0;
 }
 
 /* 頁首與導航 */
@@ -151,9 +148,6 @@ nav ul li a:hover, nav ul li a.active {
 
 /* 關於我們簡介區塊 */
 .about-section {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 40px;
     margin: 80px 0;
 }
 
@@ -161,113 +155,6 @@ nav ul li a:hover, nav ul li a.active {
     margin-bottom: 20px;
     line-height: 1.8;
     color: #ddd;
-}
-
-.about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(197, 167, 99, 0.2);
-}
-
-/* 特色與優勢區塊 */
-.features-section {
-    margin: 80px 0;
-    padding: 60px 0;
-    background: linear-gradient(rgba(26, 44, 66, 0.4), rgba(3, 3, 4, 0.4));
-    border-top: 1px solid rgba(197, 167, 99, 0.1);
-    border-bottom: 1px solid rgba(197, 167, 99, 0.1);
-}
-
-.features-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.feature-card {
-    background: linear-gradient(135deg, rgba(26, 44, 66, 0.7), rgba(3, 3, 4, 0.7));
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(197, 167, 99, 0.1);
-    transition: 0.3s;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(197, 167, 99, 0.3);
-}
-
-.feature-icon {
-    font-size: 40px;
-    color: var(--gold);
-    margin-bottom: 20px;
-}
-
-.feature-card h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: var(--light-gold);
-}
-
-.feature-card p {
-    color: #ccc;
-    line-height: 1.6;
-}
-
-/* 團隊介紹區塊 */
-.team-section {
-    margin: 80px 0;
-}
-
-.team-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-.team-member {
-    background: linear-gradient(135deg, rgba(26, 44, 66, 0.7), rgba(3, 3, 4, 0.7));
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(197, 167, 99, 0.1);
-    transition: 0.3s;
-}
-
-.team-member:hover {
-    transform: translateY(-10px);
-    border-color: rgba(197, 167, 99, 0.3);
-}
-
-.member-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.member-info {
-    padding: 25px;
-}
-
-.member-info h3 {
-    font-size: 22px;
-    margin-bottom: 5px;
-    color: var(--gold);
-}
-
-.member-title {
-    font-size: 16px;
-    color: var(--light-gold);
-    margin-bottom: 15px;
-}
-
-.member-description {
-    color: #ccc;
-    line-height: 1.6;
 }
 
 /* 時間軸區塊 */
@@ -346,125 +233,6 @@ nav ul li a:hover, nav ul li a.active {
     line-height: 1.6;
 }
 
-/* 評價輪播區塊 */
-.testimonial-section {
-    margin: 80px 0;
-}
-
-.testimonial-container {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.testimonial-slide {
-    display: flex;
-    transition: transform 0.5s ease;
-    overflow: hidden;
-}
-
-.testimonial-item {
-    min-width: 100%;
-    padding: 40px;
-    background: linear-gradient(135deg, rgba(26, 44, 66, 0.7), rgba(3, 3, 4, 0.7));
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(197, 167, 99, 0.1);
-}
-
-.testimonial-content {
-    font-style: italic;
-    color: #eee;
-    line-height: 1.8;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-}
-
-.testimonial-author img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-    border: 2px solid var(--gold);
-}
-
-.testimonial-author h4 {
-    color: var(--gold);
-    margin-bottom: 5px;
-}
-
-.testimonial-author p {
-    color: #ccc;
-    font-size: 14px;
-}
-
-.testimonial-nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    gap: 10px;
-}
-
-.testimonial-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: var(--dark-brown);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.testimonial-dot.active {
-    background-color: var(--gold);
-    transform: scale(1.2);
-}
-
-/* 合作夥伴區塊 */
-.partners-section {
-    margin: 80px 0;
-    padding: 60px 0;
-    background: linear-gradient(rgba(26, 44, 66, 0.4), rgba(3, 3, 4, 0.4));
-    border-top: 1px solid rgba(197, 167, 99, 0.1);
-    border-bottom: 1px solid rgba(197, 167, 99, 0.1);
-}
-
-.partners-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.partner-logo {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-}
-
-.partner-logo:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: scale(1.05);
-}
-
-.partner-logo img {
-    max-width: 100%;
-    max-height: 80px;
-    filter: grayscale(100%) brightness(1.2);
-    transition: 0.3s;
-}
-
-.partner-logo:hover img {
-    filter: grayscale(0%);
-}
 
 /* 聯絡區塊 */
 .contact-section {
@@ -678,20 +446,10 @@ footer {
     font-size: 14px;
 }
 
-/* 動畫 */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 /* 響應式設計 */
 @media (max-width: 1024px) {
     .page-title {
         font-size: 36px;
-    }
-    
-    .about-section {
-        grid-template-columns: 1fr;
     }
     
     .contact-container {
@@ -730,13 +488,5 @@ footer {
     
     .page-subtitle {
         font-size: 16px;
-    }
-    
-    .team-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .features-container {
-        grid-template-columns: 1fr;
     }
 }
