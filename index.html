@@ -10,12 +10,12 @@
 <body>
     <header>
         <a href="#" class="logo-container">
-            <img src="/index-img/logo.png" alt="謎域Logo" class="logo-img">
+            <img src="/index-img/logo_cut.png" alt="謎域Logo" class="logo-img">
             <div class="logo-text">謎域<span>ENIGMA STUDIO</span></div>
         </a>
         <nav>
             <ul>
-                <li><a href="#">首頁</a></li>
+                <li><a href="#" class="active">首頁</a></li>
                 <li><a href="#">密室主題</a></li>
                 <li><a href="#">常見問題</a></li>
                 <li><a href="#">關於我們</a></li>
@@ -47,6 +47,20 @@
                     <span class="news-date">2025.04.01</span>
                     <p class="news-content">我們即將推出結合VR技術的全新密室主題「虛擬迷途」，帶給您前所未有的沉浸式體驗。在這個主題中，現實與虛擬的界限變得模糊，玩家需要在兩個世界中尋找線索。預計4月底正式開放預約，敬請期待！</p>
                 </div>
+
+                <div class="news-item">
+                    <h3 class="news-title">五週年慶特別活動！</h3>
+                    <span class="news-date">2025.03.20</span>
+                    <p class="news-content">謎域成立五週年，我們將在4月15日至5月15日期間舉辦特別優惠活動。全部主題享8折優惠，VIP會員另有專屬禮遇。此外，凡參加活動期間任一主題，即有機會獲得限量紀念品及免費遊戲券。詳情請見官網活動頁面或門市海報。</p>
+                </div>
+
+                
+                <div class="news-item">
+                    <h3 class="news-title">「謎域」台南館盛大開幕！</h3>
+                    <span class="news-date">2025.03.15</span>
+                    <p class="news-content">「謎域」台南館將於4月10日正式開幕！位於台南市中西區的新據點佔地超過百坪，設有6個獨特主題密室，包括台南限定特色主題「府城傳奇」。開幕期間推出多項優惠活動，4月10日至4月17日期間預約任一主題即贈精美紀念品一份。期待與台南的朋友們一同踏上解謎冒險！</p>
+                                </div>
+    
             </div>
             <div class="news-nav">
                 <div class="news-dot active"></div>
@@ -121,15 +135,59 @@
             particles.style.transform = `translateY(${scrollPos * 0.4}px)`;
         });
         
-        // 輪播功能（簡易版）
-        const dots = document.querySelectorAll('.news-dot');
+
+        // 輪播功能（自動輪播版本）
+document.addEventListener('DOMContentLoaded', function() {
+    const dots = document.querySelectorAll('.news-dot');
+    const slide = document.querySelector('.news-slide');
+    const itemCount = document.querySelectorAll('.news-item').length;
+    let currentIndex = 0;
+    
+    // 更新輪播狀態的函數
+    function updateCarousel() {
+        slide.style.transform = `translateX(-${currentIndex * 100}%)`;
         dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                dots.forEach(d => d.classList.remove('active'));
+            if (index === currentIndex) {
                 dot.classList.add('active');
-                document.querySelector('.news-slide').style.transform = `translateX(-${index * 100}%)`;
-            });
+            } else {
+                dot.classList.remove('active');
+            }
         });
-    </script>
+    }
+    
+    // 切換到下一張的函數
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % itemCount;
+        updateCarousel();
+    }
+    
+    // 設定自動輪播，每3秒切換一次
+    let autoSlideInterval = setInterval(nextSlide, 6000);
+    
+    // 當點擊導航點時，也要更新當前索引
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+            
+            // 重置自動輪播計時器
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(nextSlide, 6000);
+        });
+    });
+    
+    // 滑鼠移入暫停自動輪播，移出恢復
+    const newsContainer = document.querySelector('.news-container');
+    if (newsContainer) {
+        newsContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+        
+        newsContainer.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(nextSlide, 6000);
+        });
+    }
+});
+</script>
 </body>
 </html>
