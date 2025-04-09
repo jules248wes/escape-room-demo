@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎域 - 線上預約</title>
+    <link rel="stylesheet" href="reservation-css.css">
+    <!-- 引入Font Awesome圖示庫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="index-img/logo.png" alt="謎域Logo" class="logo-img">
+            <div class="logo-text">謎域<span>ENIGMA STUDIO</span></div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="theme-page.html">密室主題</a></li>
+                <li><a href="faq-page.html">常見問題</a></li>
+                <li><a href="about-us.html">關於我們</a></li>
+                <li><a href="member-login-html.html">會員中心</a></li>
+            </ul>
+        </nav>
+        <a href="reservation.html" class="reserve-btn active">立即預約</a>
+    </header>
+
+    <div class="page-title-container">
+        <h1 class="page-title">線上預約</h1>
+        <p class="page-subtitle">選擇您喜愛的主題，預約您的專屬冒險</p>
+    </div>
+
+    <div class="container">
+        <div class="reservation-form-container">
+            <form id="reservationForm" class="reservation-form">
+                <div class="form-section">
+                    <h3 class="section-title">選擇主題與時間</h3>
+
+                    <div class="form-group">
+                        <label for="theme">密室主題 <span class="required">*</span></label>
+                        <select id="theme" name="theme" required>
+                            <option value="">請選擇主題</option>
+                            <option value="ancient-tomb">古墓迷蹤 (2-4人)</option>
+                            <option value="ghost-train">幽靈列車 (8-16人)</option>
+                            <option value="biohazard">生化危機 (4-8人)</option>
+                            <option value="detective">偵探Elizabeth失蹤事件 (2-4人)</option>
+                            <option value="kungfu">江湖密令 (2-4人)</option>
+                            <option value="space">太空迷途 (4-8人)</option>
+                            <option value="fairytale">童話迷城 (2-4人)</option>
+                            <option value="castle">遺忘城堡 (4-8人)</option>
+                            <option value="csi">CSI犯罪現場調查 (2-4人)</option>
+                            <option value="temple">失落神廟 (8-16人)</option>
+                        </select>
+                        <span class="error-message" id="theme-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">預約日期 <span class="required">*</span></label>
+                        <input type="date" id="date" name="date" required min="" class="datepicker">
+                        <span class="error-message" id="date-error"></span>
+                        <small class="date-hint">點擊日期欄位開啟日曆選擇器</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">預約時段 <span class="required">*</span></label>
+                        <select id="time" name="time" required>
+                            <option value="">請選擇時段</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:30">20:30</option>
+                        </select>
+                        <span class="error-message" id="time-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="people">參加人數 <span class="required">*</span></label>
+                        <input type="number" id="people" name="people" required min="1" max="16" value="2">
+                        <small class="input-hint">請輸入1-16之間的數字</small>
+                        <span class="error-message" id="people-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">聯絡資訊</h3>
+
+                    <div class="form-group">
+                        <label for="name">姓名 <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="請輸入預約人姓名" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">手機號碼 <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="請輸入可聯絡的手機號碼" required
+                            pattern="09[0-9]{8}">
+                        <span class="error-message" id="phone-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">電子郵件 <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="請輸入有效電子郵件" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="note">備註事項</label>
+                        <textarea id="note" name="note" placeholder="若有特殊需求請在此說明"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">付款方式</h3>
+
+                    <div class="form-group">
+                        <label>選擇付款方式 <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="payment" value="onsite" checked> 現場付款
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="payment" value="credit"> 信用卡預付
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="payment" value="transfer"> 銀行轉帳
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agreement" name="agreement" required>
+                            <span>我已閱讀並同意<a href="#" class="link">預約條款與規定</a> <span class="required">*</span></span>
+                        </label>
+                        <span class="error-message" id="agreement-error"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="form-actions">
+                    <button type="reset" class="btn-reset">重新填寫</button>
+                    <button type="submit" class="btn-submit">送出預約</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 模擬訊息彈窗 -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="confirmation-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h2>預約申請已送出！</h2>
+            <p>我們已將確認信寄至您的電子郵件信箱。</p>
+            <p>請至<span class="email-highlight"></span>收信，並依照信中說明完成預約確認。</p>
+            <p class="small">若您沒有收到確認信，請檢查垃圾郵件或聯絡客服。</p>
+            <button class="btn-close-modal">關閉</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <a href="#" class="footer-logo">謎域</a>
+                <p class="footer-description">「謎域」致力於打造最高品質的密室逃脫體驗，我們的每一個主題都經過精心設計，為玩家帶來驚喜與挑戰。</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook fa-2xl" style="color: #c5a763;"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram fa-2xl" style="color: #c5a763;"></i></a>
+                    <a href="#"><i class="fa-brands fa-line fa-2xl" style="color: #c5a763;"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links-container">
+                <h3 class="footer-title">快速連結</h3>
+                <ul class="footer-links">
+                    <li><a href="theme-page.html">密室主題</a></li>
+                    <li><a href="reservation.html">線上預約</a></li>
+                    <li><a href="faq-page.html">常見問題</a></li>
+                    <li><a href="member-login-html.html">會員專區</a></li>
+                    <li><a href="about-us.html">關於我們</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact-container">
+                <h3 class="footer-title">聯絡我們</h3>
+                <div class="footer-contact">
+                    <span>📍</span>
+                    <span>台北市信義區松高路123號5樓</span>
+                </div>
+                <div class="footer-contact">
+                    <span>📞</span>
+                    <span>(04) 2345-6789</span>
+                </div>
+                <div class="footer-contact">
+                    <span>📧</span>
+                    <span>info@enigmastudio.com.tw</span>
+                </div>
+                <div class="footer-contact">
+                    <span>🕒</span>
+                    <span>週一至週日 10:00-22:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 謎域 Enigma Studio. 版權所有。</p>
+        </div>
+    </footer>
+
+    <script>
+        // 設定日期最小值為今天
+        document.addEventListener('DOMContentLoaded', function () {
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            const mm = String(today.getMonth() + 1).padStart(2, '0');
+            const dd = String(today.getDate()).padStart(2, '0');
+            const formattedToday = `${yyyy}-${mm}-${dd}`;
+
+            document.getElementById('date').min = formattedToday;
+
+            // 增加日期選擇器的可見性
+            const dateInput = document.getElementById('date');
+            dateInput.addEventListener('click', function () {
+                this.showPicker();
+            });
+
+            // 綁定主題選擇變更事件
+            document.getElementById('theme').addEventListener('change', updatePeopleOptions);
+
+            // 表單提交事件
+            const form = document.getElementById('reservationForm');
+            form.addEventListener('submit', validateAndSubmit);
+
+            // 重置價格顯示
+            form.addEventListener('reset', function () {
+                document.getElementById('theme-display').textContent = '-';
+                document.getElementById('people-display').textContent = '-';
+                document.getElementById('unit-price').textContent = '-';
+                document.getElementById('total-price').textContent = '-';
+
+                // 清除所有錯誤訊息
+                const errorMessages = document.querySelectorAll('.error-message');
+                errorMessages.forEach(msg => msg.textContent = '');
+            });
+
+            // 價格計算
+            document.getElementById('theme').addEventListener('change', updatePriceEstimate);
+            document.getElementById('people').addEventListener('change', updatePriceEstimate);
+
+            // 模擬視窗關閉按鈕
+            document.querySelector('.close-btn').addEventListener('click', closeModal);
+            document.querySelector('.btn-close-modal').addEventListener('click', closeModal);
+
+            // 當點擊模態窗外部時也關閉模態窗
+            window.addEventListener('click', function (event) {
+                const modal = document.getElementById('confirmation-modal');
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+
+        // 根據所選主題更新人數選項
+        function updatePeopleOptions() {
+            // 已移除動態更新人數選項的功能
+        }
+
+        // 更新價格預估
+        function updatePriceEstimate() {
+            // 已移除價格預估功能
+        }
+
+        // 表單驗證和提交
+        function validateAndSubmit(event) {
+            event.preventDefault();
+
+            // 清除所有錯誤訊息
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach(msg => msg.textContent = '');
+
+            let isValid = true;
+
+            // 驗證主題
+            const theme = document.getElementById('theme');
+            if (!theme.value) {
+                document.getElementById('theme-error').textContent = '請選擇密室主題';
+                isValid = false;
+            }
+
+            // 驗證日期
+            const date = document.getElementById('date');
+            if (!date.value) {
+                document.getElementById('date-error').textContent = '請選擇預約日期';
+                isValid = false;
+            }
+
+            // 驗證時段
+            const time = document.getElementById('time');
+            if (!time.value) {
+                document.getElementById('time-error').textContent = '請選擇預約時段';
+                isValid = false;
+            }
+
+            // 驗證人數
+            const people = document.getElementById('people');
+            if (!people.value) {
+                document.getElementById('people-error').textContent = '請輸入參加人數';
+                isValid = false;
+            } else if (people.value < 1 || people.value > 16) {
+                document.getElementById('people-error').textContent = '人數必須在1-16人之間';
+                isValid = false;
+            }
+
+            // 驗證姓名
+            const name = document.getElementById('name');
+            if (!name.value.trim()) {
+                document.getElementById('name-error').textContent = '請輸入姓名';
+                isValid = false;
+            }
+
+            // 驗證手機
+            const phone = document.getElementById('phone');
+            if (!phone.value.trim()) {
+                document.getElementById('phone-error').textContent = '請輸入手機號碼';
+                isValid = false;
+            } else if (!phone.checkValidity()) {
+                document.getElementById('phone-error').textContent = '請輸入有效的台灣手機號碼';
+                isValid = false;
+            }
+
+            // 驗證郵件
+            const email = document.getElementById('email');
+            if (!email.value.trim()) {
+                document.getElementById('email-error').textContent = '請輸入電子郵件';
+                isValid = false;
+            } else if (!email.checkValidity()) {
+                document.getElementById('email-error').textContent = '請輸入有效的電子郵件格式';
+                isValid = false;
+            }
+
+            // 驗證同意條款
+            const agreement = document.getElementById('agreement');
+            if (!agreement.checked) {
+                document.getElementById('agreement-error').textContent = '請閱讀並同意預約條款';
+                isValid = false;
+            }
+
+            // 如果驗證通過，顯示確認訊息
+            if (isValid) {
+                document.querySelector('.email-highlight').textContent = email.value;
+                document.getElementById('confirmation-modal').style.display = 'flex';
+            }
+        }
+
+        // 關閉模擬訊息彈窗
+        function closeModal() {
+            document.getElementById('confirmation-modal').style.display = 'none';
+            // 可選：重置表單
+            //document.getElementById('reservationForm').reset();
+        }
+
+        // 頁面滾動效果
+        window.addEventListener('scroll', function () {
+            const scrollPos = window.scrollY;
+
+            if (scrollPos > 50) {
+                document.querySelector('header').style.background = 'rgba(3, 3, 4, 0.95)';
+            } else {
+                document.querySelector('header').style.background = 'rgba(3, 3, 4, 0.8)';
+            }
+        });
+    </script>
+</body>
+
+</html>
