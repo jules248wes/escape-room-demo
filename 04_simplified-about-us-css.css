@@ -369,7 +369,7 @@ footer {
 .footer-social a {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 30%;
     background-color: var(--deep-blue);
     display: flex;
     align-items: center;
@@ -379,7 +379,7 @@ footer {
 }
 
 .footer-social a:hover {
-    background-color: var(--gold);
+    background-color: var(--vibrant-blue);
 }
 
 .footer-social a span {
