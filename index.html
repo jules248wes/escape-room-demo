@@ -172,7 +172,7 @@
             }
 
             // 設定自動輪播，每3秒切換一次
-            let autoSlideInterval = setInterval(nextSlide, 6000);
+            let autoSlideInterval = setInterval(nextSlide, 4000);
 
             // 當點擊導航點時，也要更新當前索引
             dots.forEach((dot, index) => {
@@ -182,7 +182,7 @@
 
                     // 重置自動輪播計時器
                     clearInterval(autoSlideInterval);
-                    autoSlideInterval = setInterval(nextSlide, 6000);
+                    autoSlideInterval = setInterval(nextSlide, 4000);
                 });
             });
 
@@ -194,7 +194,7 @@
                 });
 
                 newsContainer.addEventListener('mouseleave', () => {
-                    autoSlideInterval = setInterval(nextSlide, 6000);
+                    autoSlideInterval = setInterval(nextSlide, 4000);
                 });
             }
         });
