@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <!-- 引入Font Awesome圖示庫 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- 頁面背景 -->
     <div class="page-background"></div>
@@ -15,19 +17,19 @@
     <!-- 頁首導航 -->
     <header>
         <a href="index.html" class="logo-container">
-            <img src="index-img/logo.png" alt="謎域Logo" class="logo-img">
+            <img src="index-img/logo_cut.png" alt="謎域Logo" class="logo-img">
             <div class="logo-text">謎域<span>ENIGMA STUDIO</span></div>
         </a>
         <nav>
             <ul>
                 <li><a href="index.html">首頁</a></li>
-                <li><a href="theme-page.html">密室主題</a></li>
-                <li><a href="faq-page.html">常見問題</a></li>
-                <li><a href="about-us.html">關於我們</a></li>
+                <li><a href="02_theme-page.html">密室主題</a></li>
+                <li><a href="03_faq-page-html.html">常見問題</a></li>
+                <li><a href="04_simplified-about-us-html.html">關於我們</a></li>
                 <li><a href="#" class="active">會員中心</a></li>
             </ul>
         </nav>
-        <a href="#" class="reserve-btn">立即預約</a>
+        <a href="06_reservation-html.html" class="reserve-btn">立即預約</a>
     </header>
 
     <!-- 登入區域 -->
@@ -45,12 +47,13 @@
                     <label for="email">電子郵件</label>
                     <input type="email" id="email" name="email" class="form-input" placeholder="請輸入您的電子郵件" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="password">密碼</label>
-                    <input type="password" id="password" name="password" class="form-input" placeholder="請輸入您的密碼" required>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="請輸入您的密碼"
+                        required>
                 </div>
-                
+
                 <div class="remember-forgot">
                     <div class="checkbox-container">
                         <input type="checkbox" id="remember" name="remember">
@@ -58,17 +61,17 @@
                     </div>
                     <a href="#" class="forgot-link">忘記密碼？</a>
                 </div>
-                
+
                 <button type="submit" class="login-button">登入</button>
-                
+
                 <div class="divider">
                     <span>或使用</span>
                 </div>
-                
+
                 <div class="social-login">
                     <!-- 可以放置社交媒體登入按鈕 -->
                 </div>
-                
+
                 <div class="register-section">
                     <p class="register-text">還沒有帳號？ <a href="#" class="register-link">立即註冊</a></p>
                 </div>
@@ -87,27 +90,27 @@
                     <a href="#"><i class="fa-brands fa-line fa-2xl" style="color: #c5a763;"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-links-container">
                 <h3 class="footer-title">快速連結</h3>
                 <ul class="footer-links">
-                    <li><a href="#">密室主題</a></li>
-                    <li><a href="#">線上預約</a></li>
-                    <li><a href="#">常見問題</a></li>
-                    <li><a href="#">會員專區</a></li>
-                    <li><a href="#">關於我們</a></li>
+                    <li><a href="02_theme-page.html">密室主題</a></li>
+                    <li><a href="06_reservation-html.html">線上預約</a></li>
+                    <li><a href="03_faq-page-html.html">常見問題</a></li>
+                    <li><a href="05_member-login-html.html">會員專區</a></li>
+                    <li><a href="04_simplified-about-us-html.html">關於我們</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-contact-container">
                 <h3 class="footer-title">聯絡我們</h3>
                 <div class="footer-contact">
                     <span>📍</span>
-                    <span>台北市信義區松高路123號5樓</span>
+                    <span>台北市信義區幸福路123-4號5樓</span>
                 </div>
                 <div class="footer-contact">
                     <span>📞</span>
-                    <span>(04) 2345-6789</span>
+                    <span>(02) 2345-6789</span>
                 </div>
                 <div class="footer-contact">
                     <span>📧</span>
@@ -119,7 +122,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>© 2025 謎域 Enigma Studio. 版權所有。</p>
         </div>
@@ -139,4 +142,5 @@
         });
     </script>
 </body>
+
 </html>
