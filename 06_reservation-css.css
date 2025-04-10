@@ -224,13 +224,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* 特別調整數字輸入框樣式 */
-input[type="number"] {
-  -moz-appearance: textfield; /* Firefox */
-}
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+  -webkit-appearance: auto;
   margin: 0;
 }
 
