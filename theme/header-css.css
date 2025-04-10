@@ -1,0 +1,16 @@
+.logo-container {
+  padding: 5px 0; /* 增加上下間距 */
+}
+
+.logo-img {
+  height: 60px; /* 原本是40px，調大到55px */
+}
+
+.logo-text {
+  font-size: 32px; /* 原本是28px，調大到32px */
+}
+
+.logo-text span {
+  font-size: 18px; /* 原本是16px，調大到18px */
+  margin-left: 12px; /* 原本是10px，增加一點間距 */
+}

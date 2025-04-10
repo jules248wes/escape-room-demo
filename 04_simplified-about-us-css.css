@@ -40,6 +40,9 @@ body {
     font-size: 42px;
     color: var(--gold);
     margin-bottom: 15px;
+    animation: fadeIn 1s forwards; /* 添加這一行 */
+    opacity: 0; /* 初始設為不可見 */
+
 }
 
 .page-subtitle {
@@ -47,6 +50,9 @@ body {
     color: #fff;
     max-width: 600px;
     margin: 0 auto;
+    animation: fadeIn 1s forwards 0.3s; /* 添加這一行，延遲0.3秒開始 */
+    opacity: 0; /* 初始設為不可見 */
+
 }
 
 /* 頁首與導航 */
@@ -67,23 +73,24 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
+    padding: 5px 0; /* 增加上下間距 */
 }
 
 .logo-img {
-    height: 40px;
+    height: 60px;
     margin-right: 10px;
 }
 
 .logo-text {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     color: var(--gold);
 }
 
 .logo-text span {
     color: var(--light-gold);
-    font-size: 16px;
-    margin-left: 10px;
+    font-size: 18px;
+    margin-left: 12px;
 }
 
 nav ul {
@@ -444,6 +451,11 @@ footer {
     border-top: 1px solid #222;
     color: #777;
     font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* 響應式設計 */
