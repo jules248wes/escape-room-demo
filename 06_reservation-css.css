@@ -307,38 +307,6 @@ textarea {
   color: var(--gold);
 }
 
-/* 費用預估區塊 */
-.price-summary {
-  grid-column: span 2;
-  background-color: rgba(26, 44, 66, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  border: 1px solid rgba(197, 167, 99, 0.2);
-}
-
-.price-summary h3 {
-  color: var(--gold);
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.price-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(197, 167, 99, 0.1);
-}
-
-.price-item.total {
-  font-weight: bold;
-  color: var(--gold);
-  border-bottom: none;
-  font-size: 18px;
-  margin-top: 15px;
-}
-
 /* 提交按鈕區域 */
 .form-actions {
   grid-column: span 2;
@@ -587,6 +555,12 @@ footer {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
