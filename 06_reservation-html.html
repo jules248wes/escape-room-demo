@@ -240,28 +240,12 @@
                 this.showPicker();
             });
 
-            // 綁定主題選擇變更事件
-            document.getElementById('theme').addEventListener('change', updatePeopleOptions);
 
             // 表單提交事件
             const form = document.getElementById('reservationForm');
             form.addEventListener('submit', validateAndSubmit);
 
-            // 重置價格顯示
-            form.addEventListener('reset', function () {
-                document.getElementById('theme-display').textContent = '-';
-                document.getElementById('people-display').textContent = '-';
-                document.getElementById('unit-price').textContent = '-';
-                document.getElementById('total-price').textContent = '-';
 
-                // 清除所有錯誤訊息
-                const errorMessages = document.querySelectorAll('.error-message');
-                errorMessages.forEach(msg => msg.textContent = '');
-            });
-
-            // 價格計算
-            document.getElementById('theme').addEventListener('change', updatePriceEstimate);
-            document.getElementById('people').addEventListener('change', updatePriceEstimate);
 
             // 模擬視窗關閉按鈕
             document.querySelector('.close-btn').addEventListener('click', closeModal);
@@ -276,15 +260,6 @@
             });
         });
 
-        // 根據所選主題更新人數選項
-        function updatePeopleOptions() {
-            // 已移除動態更新人數選項的功能
-        }
-
-        // 更新價格預估
-        function updatePriceEstimate() {
-            // 已移除價格預估功能
-        }
 
         // 表單驗證和提交
         function validateAndSubmit(event) {
