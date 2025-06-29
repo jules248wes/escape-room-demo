@@ -241,9 +241,35 @@ nav ul li a.active {
 .news-nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 30px 20px;
-
   gap: 10px;
+}
+
+.news-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.news-arrow {
+    background-color: var(--gold);
+    color: var(--deep-black);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.news-arrow:hover {
+    background-color: var(--light-gold);
 }
 
 .news-dot {
@@ -385,10 +411,6 @@ footer {
     padding: 15px;
   }
 
-  .nav-toggle {
-    display: block;
-  }
-
   nav {
     position: fixed;
     top: 80px;
@@ -398,10 +420,6 @@ footer {
     background-color: var(--deep-black);
     padding: 20px;
     transition: 0.5s;
-  }
-
-  nav.active {
-    left: 0;
   }
 
   nav ul {
