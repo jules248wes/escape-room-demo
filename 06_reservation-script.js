@@ -120,8 +120,6 @@ function validateAndSubmit(event) {
 // 關閉模擬訊息彈窗
 function closeModal() {
     document.getElementById('confirmation-modal').style.display = 'none';
-    // 可選：重置表單
-    //document.getElementById('reservationForm').reset();
 }
 
 // 頁面滾動效果
