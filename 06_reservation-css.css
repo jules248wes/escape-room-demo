@@ -562,3 +562,173 @@ footer {
     transform: translateY(0);
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+  .page-title {
+    font-size: 36px;
+  }
+  
+  .reservation-form-container {
+    padding: 30px;
+  }
+  
+  .reservation-form {
+    gap: 30px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  
+  .logo-img {
+    height: 35px;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+  }
+  
+  .logo-text span {
+    font-size: 14px;
+  }
+  
+  nav ul {
+    display: none;
+  }
+  
+  .reserve-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  
+  .page-title-container {
+    padding: 120px 5% 60px;
+  }
+  
+  .page-title {
+    font-size: 28px;
+  }
+  
+  .page-subtitle {
+    font-size: 18px;
+  }
+  
+  .reservation-form-container {
+    padding: 25px;
+    margin: 20px 10px;
+  }
+  
+  .reservation-form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .form-section {
+    grid-column: span 1;
+  }
+  
+  .form-actions {
+    grid-column: span 1;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn-reset,
+  .btn-submit {
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 30px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  footer {
+    padding: 40px 5% 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 24px;
+  }
+  
+  .page-subtitle {
+    font-size: 16px;
+  }
+  
+  .reservation-form-container {
+    padding: 20px;
+    margin: 15px 5px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  select,
+  textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .btn-reset,
+  .btn-submit {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .modal-content {
+    padding: 25px;
+  }
+  
+  .modal-content h2 {
+    font-size: 20px;
+  }
+  
+  .confirmation-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .confirmation-icon i {
+    font-size: 30px;
+  }
+}

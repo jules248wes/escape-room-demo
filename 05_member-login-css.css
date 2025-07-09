@@ -419,3 +419,113 @@ footer {
     transform: translateY(0);
   }
 }
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+  .login-card {
+    max-width: 400px;
+    padding: 25px;
+  }
+  
+  .brand-name {
+    font-size: 32px;
+  }
+  
+  .brand-slogan {
+    font-size: 16px;
+  }
+  
+  .large-logo {
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+  
+  .logo-img {
+    height: 35px;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+  }
+  
+  .logo-text span {
+    font-size: 14px;
+  }
+  
+  nav ul {
+    display: none;
+  }
+  
+  .reserve-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  
+  .login-container {
+    padding: 100px 15px 60px;
+  }
+  
+  .login-card {
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .brand-name {
+    font-size: 28px;
+  }
+  
+  .brand-slogan {
+    font-size: 14px;
+  }
+  
+  .large-logo {
+    width: 70px;
+  }
+  
+  .login-title {
+    font-size: 20px;
+  }
+  
+  .remember-forgot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  footer {
+    padding: 40px 5% 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 15px;
+  }
+  
+  .brand-name {
+    font-size: 24px;
+  }
+  
+  .large-logo {
+    width: 60px;
+  }
+  
+  .form-input {
+    padding: 10px 12px;
+  }
+  
+  .login-button {
+    padding: 12px;
+  }
+}
